@@ -1,0 +1,21 @@
+{
+  "name": "khoaguihuong",
+  "short_name": "khoaguihuong",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf8fc",
+  "theme_color": "#f5efff",
+  "description": "Một góc nhỏ để hai người viết thư và note cho nhau.",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
