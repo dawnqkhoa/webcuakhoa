@@ -13,20 +13,23 @@ const LETTERS_FILE = path.join(DATA_DIR, 'letters.json');
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const SUPABASE_URL = (process.env.SUPABASE_URL || '').replace(/\/$/, '');
 // Service-role key is server-only. Never put it in frontend code or GitHub.
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY || '';
 const sharedStoreReady = Boolean(SUPABASE_URL && SUPABASE_KEY);
 fs.mkdirSync(DATA_DIR, { recursive: true });
 function readJson(file, fallback) { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; } }
 function writeJson(file, value) { fs.writeFileSync(file, JSON.stringify(value, null, 2), 'utf8'); }
 async function supabaseRequest(table, { method = 'GET', query = '', body } = {}) {
-  const headers = { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json', Prefer: 'return=representation' };
+  // Legacy service_role keys are JWTs and can be sent as Bearer tokens.
+  // New Supabase sb_secret_ keys belong in the apikey header; they are not JWT Bearer tokens.
+  const headers = { apikey: SUPABASE_KEY, 'Content-Type': 'application/json', Prefer: 'return=representation' };
+  if (SUPABASE_KEY.startsWith('eyJ')) headers.Authorization = `Bearer ${SUPABASE_KEY}`;
   const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}${query ? `?${query}` : ''}`, { method, headers, ...(body === undefined ? {} : { body: JSON.stringify(body) }) });
   const raw = await response.text(); let data = [];
   try { data = raw ? JSON.parse(raw) : []; } catch { data = []; }
   if (!response.ok) { const error = new Error(data.message || data.error || `Supabase lỗi (${response.status})`); error.status = response.status; throw error; }
   return data;
 }
-function sendStoreError(res, error) { console.error('Storage error:', error.message); res.status(500).json({ error: sharedStoreReady ? 'Chưa kết nối được kho dữ liệu chung. Hãy kiểm tra Supabase và chạy file supabase-setup.sql.' : 'Chưa cấu hình kho dữ liệu chung. Dữ liệu hiện lưu cục bộ và có thể mất khi máy chủ khởi động lại.' }); }
+function sendStoreError(res, error) { console.error('Storage error:', error.message, error.status ? `(HTTP ${error.status})` : ''); res.status(500).json({ error: sharedStoreReady ? 'Chưa lưu được lúc này. Hãy thử tải lại trang sau một chút nhé.' : 'Kho lưu chung chưa được kết nối. Hãy thử lại sau nhé.' }); }
 function cleanText(value, max) { return String(value || '').trim().slice(0, max); }
 function publicLetter(letter) { return { id: letter.id, sender: letter.sender, subject: letter.subject, createdAt: letter.createdAt || letter.created_at }; }
 app.disable('x-powered-by'); app.use(express.json({ limit: '32kb' })); app.use(express.static(PUBLIC_DIR));
@@ -44,3 +47,4 @@ app.post('/api/letters/:id/open',async(req,res)=>{const password=String(req.body
 app.delete('/api/letters/:id',async(req,res)=>{const password=String(req.body?.password||'');try{let letter;if(sharedStoreReady){const rows=await supabaseRequest('letters',{query:`select=id,password_hash&id=eq.${encodeURIComponent(req.params.id)}&limit=1`});letter=rows[0];}else letter=readJson(LETTERS_FILE,[]).find(x=>String(x.id)===String(req.params.id));if(!letter)return res.status(404).json({error:'Không tìm thấy bức thư.'});if(!await bcrypt.compare(password,letter.password_hash))return res.status(403).json({error:'Mật khẩu chưa đúng, không thể xóa thư.'});if(sharedStoreReady)await supabaseRequest('letters',{method:'DELETE',query:`id=eq.${encodeURIComponent(req.params.id)}`});else writeJson(LETTERS_FILE,readJson(LETTERS_FILE,[]).filter(x=>String(x.id)!==String(req.params.id)));res.json({ok:true});}catch(e){sendStoreError(res,e);}});
 app.get('/health',(_req,res)=>res.json({ok:true}));
 app.listen(PORT,()=>console.log(`khoaguihuong đang chạy tại http://localhost:${PORT}`));
+
