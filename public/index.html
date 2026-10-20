@@ -13,7 +13,7 @@
 <div class="grain"></div><div class="petal-layer" id="petals" aria-hidden="true"></div>
 <header class="topbar">
   <a class="brand" href="#home">khoaguihuong <span>♡</span></a>
-  <span class="top-note">một góc nhỏ của hai đứa ♡</span>
+  <span class="top-note">một góc nhỏ dành cho cậu ♡</span>
   <button class="sound-btn" id="petalBtn" title="Thả thêm cánh hoa" aria-label="Thả thêm cánh hoa">✧</button>
 </header>
 <main>
@@ -58,7 +58,7 @@
       <div class="letter-password-grid"><div><label for="letterPassword">Mật khẩu mở thư</label><input id="letterPassword" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Ít nhất 4 ký tự" required></div><div><label for="letterPasswordConfirm">Nhập lại mật khẩu</label><input id="letterPasswordConfirm" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Nhập lại mật khẩu" required></div></div>
       <button class="action letter-submit" type="submit">Lưu bức thư ♡</button>
     </form>
-    <p class="privacy-note">Mật khẩu được lưu dưới dạng băm, không lưu nguyên văn. Nếu quên mật khẩu, website không thể khôi phục nội dung thư cho cậu.</p>
+    
     <div class="letter-list-heading"><h3>Những bức thư đã gửi</h3><button id="refreshLetters" class="text-button" type="button">Làm mới ↻</button></div>
     <div id="letterList" class="letter-list"><p class="empty-notes">Đang tải thư…</p></div>
     <div id="openedLetter" class="opened-letter" hidden></div>
@@ -66,21 +66,20 @@
 </div>
 <div class="modal" id="noticeModal" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
   <div class="modal-panel notice-panel"><button class="close" aria-label="Đóng">×</button><p class="kicker">YOUR LITTLE NOTIFICATION BOX</p><h2 id="noticeTitle">Cậu đang thế nào? <em>♡</em></h2>
-    <p class="modal-subtitle">Chọn tâm trạng rồi kéo mức độ từ xanh đến đỏ. Cảm xúc sẽ được lưu vào nhật ký để xem lại sau này.</p>
+    <p class="modal-subtitle">Chọn tâm trạng, rồi kéo thanh để tìm đúng cảm giác của cậu nhé.</p>
     <div class="notice-options">
       <div class="mood-block"><button class="notice-option" data-notice="bực mình"><span class="option-emoji">☁</span><span><b>Đang bực mình</b><small>Cho tớ biết độ bực nhé.</small></span><span class="option-arrow">↗</span></button><label class="intensity-label" for="angerLevel"><span>Độ bực</span><strong id="angerLabel">Hơi hơi bực</strong></label><input id="angerLevel" class="mood-slider anger-slider" type="range" min="1" max="5" value="1"><div class="slider-ends"><span>Hơi hơi bực</span><span>Sắp nổ tung</span></div></div>
       <div class="mood-block"><button class="notice-option" data-notice="muốn ôm"><span class="option-emoji">♡</span><span><b>Đang muốn ôm</b><small>Cần một cái ôm thật lâu.</small></span><span class="option-arrow">↗</span></button><label class="intensity-label" for="hugLevel"><span>Mức độ cần ôm</span><strong id="hugLabel">Ôm nhẹ một cái</strong></label><input id="hugLevel" class="mood-slider hug-slider" type="range" min="1" max="5" value="1"><div class="slider-ends"><span>Ôm nhẹ</span><span>Ôm ngay đi</span></div></div>
       <div class="mood-block"><button class="notice-option" data-notice="nhớ cậu"><span class="option-emoji">✉</span><span><b>Đang nhớ cậu</b><small>Nỗi nhớ đang ở mức nào?</small></span><span class="option-arrow">↗</span></button><label class="intensity-label" for="missLevel"><span>Độ nhớ</span><strong id="missLabel">Nhớ một chút</strong></label><input id="missLevel" class="mood-slider miss-slider" type="range" min="1" max="5" value="1"><div class="slider-ends"><span>Nhớ chút thôi</span><span>Nhớ nhiều lắm</span></div></div>
     </div>
     <div class="notice-response" id="noticeResponse" aria-live="polite">Cảm xúc của cậu sẽ được lưu ở đây.</div>
-    <p class="privacy-note">Cảm xúc được lưu vào nhật ký chung của website. Đừng ghi điều quá riêng tư nếu không muốn người có đường dẫn xem được.</p>
   </div>
 </div>
 
 <div class="modal" id="historyModal" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
-  <div class="modal-panel history-panel"><button class="close" aria-label="Đóng">×</button><p class="kicker">A LITTLE FEELINGS DIARY</p><h2 id="historyTitle">Những điều cậu từng cảm thấy. <em>♡</em></h2><p class="modal-subtitle">Mỗi lần chọn cảm xúc sẽ được lưu lại ở đây.</p>
+  <div class="modal-panel history-panel"><button class="close" aria-label="Đóng">×</button><p class="kicker">A LITTLE FEELINGS DIARY</p><h2 id="historyTitle">Những điều cậu từng cảm thấy. <em>♡</em></h2><p class="modal-subtitle">Những tâm trạng nho nhỏ, để lúc nào muốn thì ghé xem lại.</p>
     <div class="history-filters"><button type="button" class="history-filter active" data-filter="all">Tất cả</button><button type="button" class="history-filter" data-filter="nhớ cậu">Nhớ cậu</button><button type="button" class="history-filter" data-filter="bực mình">Bực mình</button><button type="button" class="history-filter" data-filter="muốn ôm">Muốn ôm</button></div>
-    <p id="historyStorageStatus" class="privacy-note"></p><div id="moodHistory" class="mood-history"><p class="empty-notes">Đang mở nhật ký…</p></div>
+    <div id="moodHistory" class="mood-history"><p class="empty-notes">Đang mở nhật ký…</p></div>
   </div>
 </div>
 
