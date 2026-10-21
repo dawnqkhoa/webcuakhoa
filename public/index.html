@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -10,12 +11,15 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="grain"></div><div class="petal-layer" id="petals" aria-hidden="true"></div>
+<div class="grain"></div>
+<div class="petal-layer" id="petals" aria-hidden="true"></div>
+
 <header class="topbar">
   <a class="brand" href="#home">khoaguihuong <span>♡</span></a>
   <span class="top-note">một góc nhỏ dành cho cậu ♡</span>
   <button class="sound-btn" id="petalBtn" title="Thả thêm cánh hoa" aria-label="Thả thêm cánh hoa">✧</button>
 </header>
+
 <main>
   <section class="hero" id="home">
     <div class="hero-copy">
@@ -24,72 +28,239 @@
       <p class="hero-text">Tớ nhớ là cậu thích màu tím nên làm một thế giới màu tím cho cậu.</p>
       <a class="discover" href="#menu">Khám phá góc nhỏ <span>↓</span></a>
     </div>
+
     <div class="hero-art" aria-label="Tranh minh họa hoa tím">
       <div class="art-paper">
-        <span class="art-caption cap-top">STUDY No. 011</span><div class="sun"></div>
-        <div class="sketch-stem stem-a"></div><div class="sketch-stem stem-b"></div><div class="sketch-stem stem-c"></div>
-        <div class="paint-flower flower-a">✿</div><div class="paint-flower flower-b">✿</div><div class="paint-flower flower-c">✿</div>
-        <div class="leaf leaf-a"></div><div class="leaf leaf-b"></div><div class="leaf leaf-c"></div><div class="paint-wash"></div>
+        <span class="art-caption cap-top">STUDY No. 011</span>
+        <div class="sun"></div>
+        <div class="sketch-stem stem-a"></div>
+        <div class="sketch-stem stem-b"></div>
+        <div class="sketch-stem stem-c"></div>
+        <div class="paint-flower flower-a">✿</div>
+        <div class="paint-flower flower-b">✿</div>
+        <div class="paint-flower flower-c">✿</div>
+        <div class="leaf leaf-a"></div>
+        <div class="leaf leaf-b"></div>
+        <div class="leaf leaf-c"></div>
+        <div class="paint-wash"></div>
         <span class="art-caption cap-bottom">lavender / watercolor</span>
       </div>
-      <span class="floating-star star-one">✳</span><span class="floating-star star-two">✧</span><span class="scribble">for you ♡</span>
+      <span class="floating-star star-one">✳</span>
+      <span class="floating-star star-two">✧</span>
+      <span class="scribble">for you ♡</span>
     </div>
     <div class="side-index">01 / A SMALL UNIVERSE</div>
   </section>
+
   <section class="menu-section" id="menu">
-    <div class="section-intro"><p class="kicker">CHỌN MỘT ĐIỀU CẬU MUỐN MỞ</p><h2>Những góc nhỏ <em>ở đây.</em></h2><p>Mỗi chiếc thẻ là một cánh cửa. Cậu muốn ghé vào đâu trước?</p></div>
+    <div class="section-intro">
+      <p class="kicker">CHỌN MỘT ĐIỀU CẬU MUỐN MỞ</p>
+      <h2>Những góc nhỏ <em>ở đây.</em></h2>
+      <p>Mỗi chiếc thẻ là một cánh cửa. Cậu muốn ghé vào đâu trước?</p>
+    </div>
+
     <div class="menu-grid">
-      <button class="menu-card letter-card" data-open="letterModal"><span class="card-number">01</span><span class="card-icon">✉</span><span class="card-title">Một bức thư</span><span class="card-desc">Viết thư cho nhau, mỗi thư một mật khẩu.</span><span class="card-link">MỞ THƯ <b>↗</b></span><span class="card-decoration">♡</span></button>
-      <button class="menu-card notice-card" data-open="noticeModal"><span class="card-number">02</span><span class="card-icon">♡</span><span class="card-title">Gửi cảm xúc</span><span class="card-desc">Để lại một chút tâm trạng của cậu.</span><span class="card-link">CHỌN CẢM XÚC <b>↗</b></span><span class="notification-dot"></span></button>
-      <button class="menu-card history-card" data-open="historyModal"><span class="card-number">03</span><span class="card-icon">⌁</span><span class="card-title">Nhật ký cảm xúc</span><span class="card-desc">Xem lại những lần nhớ, bực mình và muốn ôm.</span><span class="card-link">MỞ NHẬT KÝ <b>↗</b></span><span class="card-decoration">♡</span></button>
-      <button class="menu-card garden-card" data-open="gardenModal"><span class="card-number">04</span><span class="card-icon">❀</span><span class="card-title">Những mảnh note</span><span class="card-desc">Để lại vài dòng cho nhau và lưu lại ở đây.</span><span class="card-link">ĐỂ LẠI MỘT MẢNH GIẤY <b>↗</b></span><span class="card-decoration flower-decoration">✿</span></button>
+      <button class="menu-card letter-card" data-open="letterModal">
+        <span class="card-number">01</span>
+        <span class="card-icon">✉</span>
+        <span class="card-title">Một bức thư</span>
+        <span class="card-desc">Viết thư cho nhau, mỗi thư một mật khẩu.</span>
+        <span class="card-link">MỞ THƯ <b>↗</b></span>
+        <span class="card-decoration">♡</span>
+      </button>
+
+      <button class="menu-card notice-card" data-open="noticeModal">
+        <span class="card-number">02</span>
+        <span class="card-icon">♡</span>
+        <span class="card-title">Gửi cảm xúc</span>
+        <span class="card-desc">Để lại một chút tâm trạng của cậu.</span>
+        <span class="card-link">CHỌN CẢM XÚC <b>↗</b></span>
+        <span class="notification-dot"></span>
+      </button>
+
+      <button class="menu-card history-card" data-open="historyModal">
+        <span class="card-number">03</span>
+        <span class="card-icon">⌁</span>
+        <span class="card-title">Nhật ký cảm xúc</span>
+        <span class="card-desc">Xem lại những lần nhớ, bực mình và muốn ôm.</span>
+        <span class="card-link">MỞ NHẬT KÝ <b>↗</b></span>
+        <span class="card-decoration">♡</span>
+      </button>
+
+      <button class="menu-card garden-card" data-open="gardenModal">
+        <span class="card-number">04</span>
+        <span class="card-icon">❀</span>
+        <span class="card-title">Những mảnh note</span>
+        <span class="card-desc">Để lại vài dòng hoặc một tấm ảnh cho nhau.</span>
+        <span class="card-link">ĐỂ LẠI MỘT MẢNH GIẤY <b>↗</b></span>
+        <span class="card-decoration flower-decoration">✿</span>
+      </button>
     </div>
   </section>
-  <section class="closing"><div class="closing-flower">✿</div><p class="kicker">A NOTE FOR US</p><h2>Mình cứ viết cho nhau<br><em>những điều chưa kịp nói.</em></h2><p>Biệt bận rồi nhưng để ý thằng này.</p><span class="closing-sign">made with a little affection · khoaguihuong</span></section>
+
+  <section class="closing">
+    <div class="closing-flower">✿</div>
+    <p class="kicker">A NOTE FOR US</p>
+    <h2>Mình cứ viết cho nhau<br><em>những điều chưa kịp nói.</em></h2>
+    <p>Biệt bận rồi nhưng để ý thằng này.</p>
+    <span class="closing-sign">made with a little affection · khoaguihuong</span>
+  </section>
 </main>
 
+<!-- KHU VỰC THƯ -->
 <div class="modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
-  <div class="modal-panel letters-panel"><button class="close" aria-label="Đóng">×</button><p class="kicker">LETTERS BETWEEN US</p><h2 id="letterTitle">Thư của chúng mình <em>♡</em></h2>
+  <div class="modal-panel letters-panel">
+    <button class="close" aria-label="Đóng">×</button>
+    <p class="kicker">LETTERS BETWEEN US</p>
+    <h2 id="letterTitle">Thư của chúng mình <em>♡</em></h2>
     <p class="modal-subtitle">Mỗi bức thư có mật khẩu riêng do người viết đặt. Hãy nhớ mật khẩu để mở hoặc xóa thư sau này.</p>
+
     <form id="letterForm" class="letter-form">
-      <label for="letterSender">Tên / biệt danh của cậu</label><input id="letterSender" maxlength="40" placeholder="Ví dụ: Khoa" required>
-      <label for="letterSubject">Tên bức thư</label><input id="letterSubject" maxlength="80" placeholder="Một điều tớ muốn kể..." required>
-      <label for="letterBody">Nội dung thư</label><textarea id="letterBody" maxlength="10000" placeholder="Viết những điều cậu muốn gửi..." required></textarea>
-      <div class="letter-password-grid"><div><label for="letterPassword">Mật khẩu mở thư</label><input id="letterPassword" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Ít nhất 4 ký tự" required></div><div><label for="letterPasswordConfirm">Nhập lại mật khẩu</label><input id="letterPasswordConfirm" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Nhập lại mật khẩu" required></div></div>
+      <label for="letterSender">Tên / biệt danh của cậu</label>
+      <input id="letterSender" maxlength="40" placeholder="Ví dụ: Khoa" required>
+
+      <label for="letterSubject">Tên bức thư</label>
+      <input id="letterSubject" maxlength="80" placeholder="Một điều tớ muốn kể..." required>
+
+      <label for="letterBody">Nội dung thư</label>
+      <textarea id="letterBody" maxlength="10000" placeholder="Viết những điều cậu muốn gửi..." required></textarea>
+
+      <div class="letter-password-grid">
+        <div>
+          <label for="letterPassword">Mật khẩu mở thư</label>
+          <input id="letterPassword" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Ít nhất 4 ký tự" required>
+        </div>
+        <div>
+          <label for="letterPasswordConfirm">Nhập lại mật khẩu</label>
+          <input id="letterPasswordConfirm" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Nhập lại mật khẩu" required>
+        </div>
+      </div>
       <button class="action letter-submit" type="submit">Lưu bức thư ♡</button>
     </form>
-    
-    <div class="letter-list-heading"><h3>Những bức thư đã gửi</h3><button id="refreshLetters" class="text-button" type="button">Làm mới ↻</button></div>
+
+    <div class="letter-list-heading">
+      <h3>Những bức thư đã gửi</h3>
+      <button id="refreshLetters" class="text-button" type="button">Làm mới ↻</button>
+    </div>
     <div id="letterList" class="letter-list"><p class="empty-notes">Đang tải thư…</p></div>
     <div id="openedLetter" class="opened-letter" hidden></div>
   </div>
 </div>
+
+<!-- KHU VỰC CẢM XÚC -->
 <div class="modal" id="noticeModal" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
-  <div class="modal-panel notice-panel"><button class="close" aria-label="Đóng">×</button><p class="kicker">YOUR LITTLE NOTIFICATION BOX</p><h2 id="noticeTitle">Cậu đang thế nào? <em>♡</em></h2>
+  <div class="modal-panel notice-panel">
+    <button class="close" aria-label="Đóng">×</button>
+    <p class="kicker">YOUR LITTLE NOTIFICATION BOX</p>
+    <h2 id="noticeTitle">Cậu đang thế nào? <em>♡</em></h2>
     <p class="modal-subtitle">Chọn tâm trạng, rồi kéo thanh để tìm đúng cảm giác của cậu nhé.</p>
+
     <div class="notice-options">
-      <div class="mood-block"><button class="notice-option" data-notice="bực mình"><span class="option-emoji">☁</span><span><b>Đang bực mình</b><small>Cho tớ biết độ bực nhé.</small></span><span class="option-arrow">↗</span></button><label class="intensity-label" for="angerLevel"><span>Độ bực</span><strong id="angerLabel">Hơi hơi bực</strong></label><input id="angerLevel" class="mood-slider anger-slider" type="range" min="1" max="5" value="1"><div class="slider-ends"><span>Hơi hơi bực</span><span>Sắp nổ tung</span></div></div>
-      <div class="mood-block"><button class="notice-option" data-notice="muốn ôm"><span class="option-emoji">♡</span><span><b>Đang muốn ôm</b><small>Cần một cái ôm thật lâu.</small></span><span class="option-arrow">↗</span></button><label class="intensity-label" for="hugLevel"><span>Mức độ cần ôm</span><strong id="hugLabel">Ôm nhẹ một cái</strong></label><input id="hugLevel" class="mood-slider hug-slider" type="range" min="1" max="5" value="1"><div class="slider-ends"><span>Ôm nhẹ</span><span>Ôm ngay đi</span></div></div>
-      <div class="mood-block"><button class="notice-option" data-notice="nhớ cậu"><span class="option-emoji">✉</span><span><b>Đang nhớ cậu</b><small>Nỗi nhớ đang ở mức nào?</small></span><span class="option-arrow">↗</span></button><label class="intensity-label" for="missLevel"><span>Độ nhớ</span><strong id="missLabel">Nhớ một chút</strong></label><input id="missLevel" class="mood-slider miss-slider" type="range" min="1" max="5" value="1"><div class="slider-ends"><span>Nhớ chút thôi</span><span>Nhớ nhiều lắm</span></div></div>
+      <div class="mood-block">
+        <button class="notice-option" data-notice="bực mình">
+          <span class="option-emoji">☁</span>
+          <span><b>Đang bực mình</b><small>Cho tớ biết độ bực nhé.</small></span>
+          <span class="option-arrow">↗</span>
+        </button>
+        <label class="intensity-label" for="angerLevel"><span>Độ bực</span><strong id="angerLabel">Hơi hơi bực</strong></label>
+        <input id="angerLevel" class="mood-slider anger-slider" type="range" min="1" max="5" value="1">
+        <div class="slider-ends"><span>Hơi hơi bực</span><span>Sắp nổ tung</span></div>
+      </div>
+
+      <div class="mood-block">
+        <button class="notice-option" data-notice="muốn ôm">
+          <span class="option-emoji">♡</span>
+          <span><b>Đang muốn ôm</b><small>Cần một cái ôm thật lâu.</small></span>
+          <span class="option-arrow">↗</span>
+        </button>
+        <label class="intensity-label" for="hugLevel"><span>Mức độ cần ôm</span><strong id="hugLabel">Ôm nhẹ một cái</strong></label>
+        <input id="hugLevel" class="mood-slider hug-slider" type="range" min="1" max="5" value="1">
+        <div class="slider-ends"><span>Ôm nhẹ</span><span>Ôm ngay đi</span></div>
+      </div>
+
+      <div class="mood-block">
+        <button class="notice-option" data-notice="nhớ cậu">
+          <span class="option-emoji">✉</span>
+          <span><b>Đang nhớ cậu</b><small>Nỗi nhớ đang ở mức nào?</small></span>
+          <span class="option-arrow">↗</span>
+        </button>
+        <label class="intensity-label" for="missLevel"><span>Độ nhớ</span><strong id="missLabel">Nhớ một chút</strong></label>
+        <input id="missLevel" class="mood-slider miss-slider" type="range" min="1" max="5" value="1">
+        <div class="slider-ends"><span>Nhớ chút thôi</span><span>Nhớ nhiều lắm</span></div>
+      </div>
     </div>
+
+    <!-- THÊM CẢM XÚC RIÊNG -->
+    <div class="custom-mood-section">
+      <h3>Thêm một cảm xúc của riêng cậu ♡</h3>
+      <p class="modal-subtitle">Đặt tên cho cảm xúc mà cậu muốn lưu lại.</p>
+      <form id="customMoodForm" class="custom-mood-form">
+        <input id="customMoodEmoji" type="text" maxlength="8" value="♡" aria-label="Biểu tượng cảm xúc" placeholder="Emoji">
+        <input id="customMoodName" type="text" maxlength="32" placeholder="Ví dụ: hơi tủi thân..." required>
+        <button class="action" type="submit">Thêm cảm xúc</button>
+      </form>
+      <div id="customMoodList" class="custom-mood-list" aria-live="polite"></div>
+    </div>
+
     <div class="notice-response" id="noticeResponse" aria-live="polite">Cảm xúc của cậu sẽ được lưu ở đây.</div>
   </div>
 </div>
 
+<!-- NHẬT KÝ CẢM XÚC -->
 <div class="modal" id="historyModal" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
-  <div class="modal-panel history-panel"><button class="close" aria-label="Đóng">×</button><p class="kicker">A LITTLE FEELINGS DIARY</p><h2 id="historyTitle">Những điều cậu từng cảm thấy. <em>♡</em></h2><p class="modal-subtitle">Những tâm trạng nho nhỏ, để lúc nào muốn thì ghé xem lại.</p>
-    <div class="history-filters"><button type="button" class="history-filter active" data-filter="all">Tất cả</button><button type="button" class="history-filter" data-filter="nhớ cậu">Nhớ cậu</button><button type="button" class="history-filter" data-filter="bực mình">Bực mình</button><button type="button" class="history-filter" data-filter="muốn ôm">Muốn ôm</button></div>
+  <div class="modal-panel history-panel">
+    <button class="close" aria-label="Đóng">×</button>
+    <p class="kicker">A LITTLE FEELINGS DIARY</p>
+    <h2 id="historyTitle">Những điều cậu từng cảm thấy. <em>♡</em></h2>
+    <p class="modal-subtitle">Những tâm trạng nho nhỏ, để lúc nào muốn thì ghé xem lại.</p>
+
+    <div class="history-filters">
+      <button type="button" class="history-filter active" data-filter="all">Tất cả</button>
+      <button type="button" class="history-filter" data-filter="nhớ cậu">Nhớ cậu</button>
+      <button type="button" class="history-filter" data-filter="bực mình">Bực mình</button>
+      <button type="button" class="history-filter" data-filter="muốn ôm">Muốn ôm</button>
+    </div>
     <div id="moodHistory" class="mood-history"><p class="empty-notes">Đang mở nhật ký…</p></div>
   </div>
 </div>
 
+<!-- KHU VỰC NOTE -->
 <div class="modal" id="gardenModal" role="dialog" aria-modal="true" aria-labelledby="gardenTitle">
-  <div class="modal-panel garden-panel"><button class="close" aria-label="Đóng">×</button><p class="kicker">A FEW PURPLE FLOWERS</p><h2 id="gardenTitle">Tặng cậu một bông. <em>✿</em></h2><p class="modal-subtitle">Nhấn vào những bông hoa để đọc lời chúc nho nhỏ.</p>
-    <p class="modal-subtitle">Viết một cảm nhận, một điều muốn kể hoặc một lời nhắn. Mảnh giấy sẽ được dán lên cây để Khoa đọc.</p>
-    <form id="noteForm" class="note-form"><input id="noteAuthor" maxlength="40" placeholder="Tên / biệt danh của cậu" required><textarea id="noteText" maxlength="280" placeholder="Hôm nay tớ muốn kể..." required></textarea><label class="note-password-label" for="noteDeletePassword">Mật khẩu để xóa note này</label><input id="noteDeletePassword" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Ít nhất 4 ký tự" required><div class="note-form-bottom"><span id="noteCount">0/280</span><button class="action note-submit" type="submit">Lưu note ♡</button></div></form>
-    <div class="note-tree" id="noteTree" aria-live="polite"><p class="empty-notes">Cây đang chờ những mảnh giấy đầu tiên…</p></div><p class="flower-response" id="flowerResponse">Mỗi mảnh giấy là một điều cậu muốn người kia biết. Mỗi note có mật khẩu riêng để xóa.</p>
+  <div class="modal-panel garden-panel">
+    <button class="close" aria-label="Đóng">×</button>
+    <p class="kicker">A FEW PURPLE FLOWERS</p>
+    <h2 id="gardenTitle">Tặng cậu một bông. <em>✿</em></h2>
+    <p class="modal-subtitle">Nhấn vào những bông hoa để đọc lời chúc nho nhỏ.</p>
+    <p class="modal-subtitle">Viết một cảm nhận, một điều muốn kể hoặc một lời nhắn. Cậu cũng có thể đính kèm một tấm ảnh.</p>
+
+    <form id="noteForm" class="note-form">
+      <input id="noteAuthor" maxlength="40" placeholder="Tên / biệt danh của cậu" required>
+      <textarea id="noteText" maxlength="280" placeholder="Hôm nay tớ muốn kể..."></textarea>
+
+      <div class="note-image-field">
+        <label for="noteImage">Đính kèm một tấm ảnh (không bắt buộc)</label>
+        <input id="noteImage" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+        <div id="noteImagePreview" class="note-image-preview" hidden>
+          <img id="noteImagePreviewImg" alt="Ảnh xem trước cho note">
+          <button id="removeNoteImage" class="text-button" type="button">Bỏ ảnh ×</button>
+        </div>
+        <small>Hỗ trợ PNG, JPG, WEBP hoặc GIF. Nên chọn ảnh dưới 3 MB.</small>
+      </div>
+
+      <label class="note-password-label" for="noteDeletePassword">Mật khẩu để xóa note này</label>
+      <input id="noteDeletePassword" type="password" minlength="4" maxlength="100" autocomplete="new-password" placeholder="Ít nhất 4 ký tự" required>
+
+      <div class="note-form-bottom">
+        <span id="noteCount">0/280</span>
+        <button class="action note-submit" type="submit">Lưu note ♡</button>
+      </div>
+    </form>
+
+    <div class="note-tree" id="noteTree" aria-live="polite"><p class="empty-notes">Cây đang chờ những mảnh giấy đầu tiên…</p></div>
+    <p class="flower-response" id="flowerResponse">Mỗi mảnh giấy là một điều cậu muốn người kia biết. Mỗi note có mật khẩu riêng để xóa.</p>
   </div>
 </div>
+
 <div class="toast" id="toast" role="status"></div>
 <script src="/app.js"></script>
 </body>
