@@ -28,3 +28,166 @@
 /* Letters and per-note deletion controls */
 .letters-panel{width:min(760px,100%);border-radius:16px}.letter-form{display:grid;gap:9px;margin:22px 0;padding:18px;background:#faf5ff;border:1px solid #eadcf3}.letter-form label,.note-password-label{font-size:.75rem;color:#765d88;margin-top:4px}.letter-form input,.letter-form textarea,.note-form input{width:100%;padding:11px 12px;border:1px solid #dfd0e9;background:#fffdfd;color:#453451;font:inherit;outline-color:#b699d0}.letter-form textarea{min-height:150px;resize:vertical;line-height:1.65}.letter-password-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.letter-password-grid>div{display:grid;gap:8px}.letter-submit{border:0;background:#79549c;color:#fff;padding:12px 16px;margin-top:8px}.letter-list-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:26px}.letter-list-heading h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:500}.text-button{border:0;background:transparent;color:#8865a5}.letter-list{display:grid;gap:9px}.letter-list-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;background:#fcf8ff;border:1px solid #eee3f4}.letter-list-info{min-width:0;display:grid;gap:5px}.letter-list-info strong{overflow-wrap:anywhere;color:#59416b}.letter-list-info small,.letter-list-item small{font-size:.68rem;color:#9b8ca3}.letter-actions{display:flex;gap:6px;flex-shrink:0}.small-action{border:1px solid #d9c6e7;background:#fff;color:#79549c;padding:7px 9px;font-size:.72rem}.delete-action{color:#a44d6a;border-color:#edced9}.opened-letter{margin-top:16px;padding:22px;background:linear-gradient(135deg,#fffdfd,#f8efff);border:1px solid #e5d5f0}.opened-letter h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:#59416b}.opened-letter>small{color:#9b8ca3;font-size:.7rem}.opened-letter-body{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.9;color:#6e5e7c;margin:16px 0}.note-form input{margin-bottom:10px}.note-form .note-password-label{display:block;margin:2px 0 8px}.sticky-note{padding-top:24px}.note-delete{position:absolute;top:5px;right:6px;width:22px;height:22px;border:0;border-radius:50%;background:#fff9;color:#9a6d9f;font-size:1.1rem;line-height:1;cursor:pointer}.note-delete:hover{background:#fff;color:#b34c70}
 @media(max-width:520px){.letter-password-grid{grid-template-columns:1fr}.letter-list-item{align-items:flex-start;flex-direction:column}.letter-actions{width:100%}.small-action{flex:1}.letters-panel{padding-left:18px;padding-right:18px}}
+
+/* ===== CẢM XÚC TỰ TẠO ===== */
+.custom-mood-section {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(151, 117, 177, 0.2);
+}
+
+.custom-mood-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.custom-mood-form input {
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid rgba(151, 117, 177, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  color: inherit;
+  font: inherit;
+}
+
+#customMoodEmoji {
+  width: 70px;
+  text-align: center;
+}
+
+#customMoodName {
+  flex: 1;
+  width: 150px;
+}
+
+.custom-mood-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.custom-mood-item {
+  padding: 9px 14px;
+  border: 1px solid rgba(151, 117, 177, 0.25);
+  border-radius: 999px;
+  background: rgba(246, 239, 252, 0.85);
+  color: #654b78;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.custom-mood-item:hover {
+  transform: translateY(-2px);
+  background: #eee1f8;
+}
+
+.custom-mood-item:focus-visible,
+.custom-mood-form input:focus-visible {
+  outline: 2px solid #a783c4;
+  outline-offset: 3px;
+}
+
+/* ===== ẢNH ĐÍNH KÈM NOTE ===== */
+.note-image-field {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.note-image-field label {
+  font-size: 0.94rem;
+}
+
+.note-image-field input[type="file"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px dashed rgba(151, 117, 177, 0.45);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  color: inherit;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.note-image-field small {
+  opacity: 0.72;
+  font-size: 0.82rem;
+}
+
+.note-image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.note-image-preview[hidden] {
+  display: none !important;
+}
+
+.note-image-preview img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(67, 43, 82, 0.1);
+}
+
+.text-button {
+  padding: 6px 10px;
+  border: 0;
+  background: transparent;
+  color: #8a5a9f;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Ảnh đã lưu trên cây note */
+.sticky-note .note-attached-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 320px;
+  margin: 12px 0;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.sticky-note {
+  overflow-wrap: anywhere;
+}
+
+.sticky-note p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Nút và ô nhập trên màn hình nhỏ */
+@media (max-width: 480px) {
+  .custom-mood-form {
+    align-items: stretch;
+  }
+
+  #customMoodName {
+    min-width: 120px;
+  }
+
+  .custom-mood-form button {
+    width: 100%;
+  }
+
+  .custom-mood-item {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
